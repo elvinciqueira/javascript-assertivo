@@ -1,2 +1,4 @@
 const idade = 24;
-const novaIdade = idad + 1;
+const novaIdade = idade + 1;
+
+console.log(novaIdade);
