@@ -24,7 +24,7 @@ describe("logger", () => {
       expect(spyError).toHaveBeenCalledTimes(1);
     });
 
-    it("Deve chamar a função de success ao executar logger.success('Test')", () => {
+    it("Deve chamar a função de log ao executar logger.success('Test')", () => {
       logger.success("Teste");
       expect(spyLog).toHaveBeenCalledTimes(1);
     });
