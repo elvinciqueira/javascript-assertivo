@@ -11,3 +11,11 @@ it("Deve retornar os campos caso o dado seja válido", () => {
   const retorno = middleware(dados);
   expect(retorno).toEqual(dados);
 });
+
+it("Deve retornar um erro caso os campos não sejam válidos", () => {
+  const dados = {
+    data: {},
+  };
+  const retorno = () => middleware(dados);
+  expect(retorno).toThrow();
+});
