@@ -1,13 +1,13 @@
 import {
   getUserByUid,
   getUserByUsernameAndPassword,
-} from "../../../src/database/user/read.js";
+} from "database/user/read.js";
 
-import { loadDatabase } from "../../../src/database/file.js";
-import { ERROR_MESSAGE } from "../../../src/utils/errorMessage";
+import { loadDatabase } from "database/file.js";
+import { ERROR_MESSAGE } from "utils/errorMessage";
 
-jest.mock("../../../src/database/file.js");
-jest.mock("../../../src/database/path.js");
+jest.mock("database/file.js");
+jest.mock("database/path.js");
 
 const mockUsuario = {
   uid: "abc-1234",

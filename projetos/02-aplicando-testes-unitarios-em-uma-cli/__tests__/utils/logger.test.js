@@ -1,4 +1,4 @@
-import logger from "../../src/utils/logger.js";
+import logger from "utils/logger.js";
 
 const spyLog = jest.spyOn(console, "log").mockImplementation();
 const spyError = jest.spyOn(console, "error").mockImplementation();

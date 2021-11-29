@@ -1,10 +1,10 @@
-import { createUser } from "../../../src/database/user/create";
+import { createUser } from "database/user/create";
 
-import * as file from "../../../src/database/file.js";
-import { ROLES } from "../../../src/constants/roles";
+import * as file from "database/file.js";
+import { ROLES } from "constants/roles";
 
-jest.mock("../../../src/database/file.js");
-jest.mock("../../../src/database/path.js");
+jest.mock("database/file.js");
+jest.mock("database/path.js");
 
 const usuario = {
   name: "John",
