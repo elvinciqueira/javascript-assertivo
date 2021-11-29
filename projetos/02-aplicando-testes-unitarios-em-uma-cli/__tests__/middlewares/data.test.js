@@ -1,5 +1,5 @@
 import { validateDataMiddleware } from "middlewares/data.js";
-
+import { MESSAGES } from "utils/args.js";
 const middleware = validateDataMiddleware(["email"]);
 
 it("Deve retornar os campos caso o dado seja válido", () => {
@@ -17,5 +17,5 @@ it("Deve retornar um erro caso os campos não sejam válidos", () => {
     data: {},
   };
   const retorno = () => middleware(dados);
-  expect(retorno).toThrow();
+  expect(retorno).toThrowError(MESSAGES.missingArgs());
 });
