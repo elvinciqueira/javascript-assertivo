@@ -1,7 +1,7 @@
 // Permissões
-const ROLES = {
-  ADMIN: 'ADMIN',
-  USER: 'USER'
+export const ROLES = {
+  ADMIN: "ADMIN",
+  USER: "USER",
 };
 
 // Valida se usuário é admin

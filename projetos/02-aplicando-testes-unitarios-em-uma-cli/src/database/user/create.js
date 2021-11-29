@@ -1,7 +1,7 @@
-import faker from 'faker';
+import faker from "faker";
 
-import ROLES from '../../constants/roles.js';
-import { loadDatabase, saveDatabase } from '../file.js';
+import ROLES from "../../constants/roles.js";
+import { loadDatabase, saveDatabase } from "../file.js";
 
 export const createUser = async ({
   email,
@@ -14,11 +14,19 @@ export const createUser = async ({
 }) => {
   const users = await loadDatabase();
   const uid = faker.datatype.uuid();
-  const user = { email, password, userName, name, lastName, role, uid, ...rest };
+  const user = {
+    email,
+    password,
+    userName,
+    name,
+    lastName,
+    role,
+    uid,
+    ...rest,
+  };
 
   users.push(user);
   await saveDatabase(users);
 
   return user;
-}
-
+};
